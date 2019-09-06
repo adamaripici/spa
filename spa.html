@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
+
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+font-family: 'Cinzel', serif;
+}
+
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background: url(Kay/bamboo.jpg);}
+#Pricing {background: url(Kay/bamboo.jpg) ;}
+#Contact {background: url(Kay/bamboo.jpg);}
+#About {background: url(Kay/bamboo.jpg);}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'yellow')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Pricing', this, 'yellow')">Pricing</button>
+<button class="tablink" onclick="openPage('Contact', this, 'yellow')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'yellow')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+
+
+  <center> <b>  <p><font size="10" color="black"  > Welcome to Kay Foot Spa </font> </p>  </b> </center>
+  <center> <h1>Hours: Mon-Sun 10 AM-9 PM</h1> </center>
+  <center> <h1>671 Waukegan Rd, Deerfield IL 60015</h1> </center>
+  <center> <h1>Tel: 312-593-3466</h1> </center>
+  <div style="position:absolute;right:415px" >
+    <center>
+
+   </center> </div>
+
+</div>
+
+<div id="Pricing" class="tabcontent">
+  <h3>Pricing</h3>
+
+
+  <div style="position:absolute;background:white;border:10px solid yellow;
+  left:200px;height:420px;width:420px" >
+    <center>
+    <u>  <p><font size="7" color="red"> <h2> Kay Special </h2> </u>  </font> </p>
+      <h1> <font color="black">60 min $29</h1>
+  <h3> <font color="black">30 Min foot, massage and 30 min <br> Head, Neck, Shoulder,
+   Back Massage <h3>
+  <h1>90 min $49</h1>
+  <p ><font size="7" color="red"> <h2> <u> Basic </u> </h2> </font> </p>
+  <h1> 30 min $25 </h1>
+   </center> </div>
+   <img src="Kay/feet.jpg" style= "height:440px;width:420px; position:absolute;left:650px">
+   <div style="position:absolute;background:white;border:10px solid yellow;
+   height:420px;width:420px;left:200px;top:600px" >
+   <center>
+   <u>  <p><font size="7" color="red"> <h2> Table Massage </h2> </u>  </font> </p>
+    <font color="red"> <h1>  (Body Massage) </h1> </font>
+    <font color="red"> <u> <h3>(free Hot Stone) </u> </h3> </font>
+    <h1>30 min   $30</h1>
+    <h1>40 min   $40</h1>
+    <h1>60 min   $50</h1>
+    <h1>90 min   $80</h1>
+    <img src="documents/Kay/sleeping.jpg" alt="sleepinglady"
+     style="height:440px;width:420px;position:absolute;left:450px; top: 5px" > </center>
+   </div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
